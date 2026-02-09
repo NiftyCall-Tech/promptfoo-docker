@@ -6,10 +6,43 @@ Self-hosted [Promptfoo](https://www.promptfoo.dev/) web UI and API for running e
 
 - [Docker](https://docs.docker.com/get-docker/) and Docker Compose (or `docker compose` plugin)
 - At least one LLM provider API key (e.g. OpenAI, Anthropic, Google) for running evals
+- **Option A:** [Git](https://git-scm.com/downloads) (to clone the repo) **or Option B:** a browser (to download the repo as ZIP)
 
 ## Quick start
 
-### 1. Create your environment file
+### 1. Get the repo and open the folder
+
+**Option A – With Git (Windows / macOS / Linux):**
+
+```bash
+git clone https://github.com/NiftyCall-Tech/promptfoo-docker.git
+cd promptfoo-docker
+```
+
+**Option B – Without Git (download as ZIP):**
+
+1. Open [https://github.com/NiftyCall-Tech/promptfoo-docker](https://github.com/NiftyCall-Tech/promptfoo-docker) in your browser.
+2. Click the green **Code** button → **Download ZIP**.
+3. Unzip the file, then open a terminal in the unzipped folder:
+   - **Windows:** In File Explorer, go into the `promptfoo-docker` folder, then in the address bar type `cmd` or `powershell` and press Enter. Or right‑click the folder → **Open in Terminal** (if available).
+   - **macOS:** Right‑click the `promptfoo-docker` folder → **New Terminal at Folder**, or run `cd ~/Downloads/promptfoo-docker` (adjust path if you saved the ZIP elsewhere).
+   - **Linux:** Open a terminal, then run `cd ~/Downloads/promptfoo-docker` (or the path where you extracted the ZIP).
+
+### 2. Create your environment file
+
+**Windows (PowerShell):**
+
+```powershell
+Copy-Item .env.example .env
+```
+
+**Windows (Command Prompt):**
+
+```cmd
+copy .env.example .env
+```
+
+**macOS / Linux:**
 
 ```bash
 cp .env.example .env
@@ -17,17 +50,19 @@ cp .env.example .env
 
 Edit `.env` and set the API keys you need. Leave others empty. **Do not commit `.env`** - it contains secrets.
 
-### 2. Start the application
+### 3. Start the application
+
+**Windows / macOS / Linux:**
 
 ```bash
 docker compose up -d
 ```
 
-### 3. Open the UI
+### 4. Open the UI
 
 Open **http://localhost:3000** in your browser. You can create evals, run them (using the API keys you set in `.env`), and share results.
 
-### 4. Stop the application
+### 5. Stop the application
 
 ```bash
 docker compose stop
