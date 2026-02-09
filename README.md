@@ -15,7 +15,7 @@ Self-hosted [Promptfoo](https://www.promptfoo.dev/) web UI and API for running e
 cp .env.example .env
 ```
 
-Edit `.env` and set the API keys you need. Leave others empty. **Do not commit `.env`** — it contains secrets.
+Edit `.env` and set the API keys you need. Leave others empty. **Do not commit `.env`** - it contains secrets.
 
 ### 2. Start the application
 
@@ -41,7 +41,7 @@ docker compose down
 
 ## API keys and providers
 
-The most common provider API keys are supported via `.env`. See **`.env.example`** for the full list and [**Promptfoo – LLM Providers**](https://www.promptfoo.dev/docs/providers/) to add any other API keys or providers.
+The most common provider API keys are supported via `.env`. See **`.env.example`** for the full list and [**Promptfoo - LLM Providers**](https://www.promptfoo.dev/docs/providers/) to add any other API keys or providers.
 
 Examples of variables you can set in `.env`:
 
@@ -69,5 +69,6 @@ Examples of variables you can set in `.env`:
 - **Evals or UI not loading**  
   Ensure at least one provider API key is set in `.env` if you want to run evals from the UI.
 
-- **More help**  
-  [Promptfoo – Providers](https://www.promptfoo.dev/docs/providers/)
+- **More help**
+  - [Promptfoo Providers](https://www.promptfoo.dev/docs/providers/)
+  - [Promptfoo Guides](https://www.promptfoo.dev/docs/category/guides/)
